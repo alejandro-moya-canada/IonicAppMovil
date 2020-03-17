@@ -9,11 +9,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/schedule/schedule.module').then( m => m.SchedulePageModule)
   },
   {
-    path: 'speaker-detail',
-    loadChildren: () => import('./pages/speaker-detail/speaker-detail.module').then( m => m.SpeakerDetailPageModule)
-  },
-  {
-    path: 'speaker-list',
+    path: 'speakers',
     loadChildren: () => import('./pages/speaker-list/speaker-list.module').then( m => m.SpeakerListPageModule)
   },
   {

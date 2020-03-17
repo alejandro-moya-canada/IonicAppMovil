@@ -6,7 +6,13 @@ import { SpeakerListPage } from './speaker-list.page';
 const routes: Routes = [
   {
     path: '',
-    component: SpeakerListPage
+    component: SpeakerListPage,
+    children: [
+      {
+        path: 'speaker-details/:speakerId',
+        loadChildren: () => import('../speaker-detail/speaker-detail.module').then(m => m.SpeakerDetailPageModule)
+      }
+    ]
   }
 ];
 
