@@ -123,7 +123,7 @@ export class AppComponent implements OnInit{
   // logout con redireccion a la página principal
   logout() {
     this.userData.logout().then(() => {
-      return this.router.navigateByUrl('/app/tabs/schedule');
+      return this.router.navigateByUrl('/schedule');
     });
   }
 

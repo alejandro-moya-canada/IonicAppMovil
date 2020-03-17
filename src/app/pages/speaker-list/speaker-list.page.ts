@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ConferenceData } from 'src/app/providers/conference-data';
 
 @Component({
   selector: 'app-speaker-list',
   templateUrl: './speaker-list.page.html',
   styleUrls: ['./speaker-list.page.scss'],
 })
-export class SpeakerListPage implements OnInit {
+export class SpeakerListPage {
+  speakers: any[] = [];
 
-  constructor() { }
+  constructor(public confData: ConferenceData) { }
 
-  ngOnInit() {
+  ionViewDidEnter() {
+    this.confData.getSpeakers().subscribe((speakers: any[]) => {
+      this.speakers = speakers;
+    });
   }
+  
 
 }
