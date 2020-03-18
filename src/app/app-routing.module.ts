@@ -40,6 +40,10 @@ const routes: Routes = [
     path: 'timeless',
     loadChildren: () => import('./pages/calendar/calendar.module').then( m => m.CalendarPageModule)
   },
+  {
+    path: 'users',
+    loadChildren: () => import('./pages/users-table/users-table.module').then( m => m.UsersTablePageModule)
+  },
 ];
 
 @NgModule({

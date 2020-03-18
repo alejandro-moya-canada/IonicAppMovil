@@ -29,9 +29,14 @@ export class AppComponent implements OnInit{
       icon: 'calendar'
     },
     {
+      title: 'Users',
+      url: '/users',
+      icon: 'people'
+    },
+    {
       title: 'Speakers',
       url: '/speakers',
-      icon: 'people'
+      icon: 'megaphone'
     },
     {
       title: 'Map',
