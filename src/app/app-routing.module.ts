@@ -44,6 +44,14 @@ const routes: Routes = [
     path: 'users',
     loadChildren: () => import('./pages/users-table/users-table.module').then( m => m.UsersTablePageModule)
   },
+  {
+    path: 'clients',
+    loadChildren: () => import('./pages/clients-table/clients-table.module').then( m => m.ClientsTablePageModule)
+  },
+  {
+    path: 'clients-modal',
+    loadChildren: () => import('./pages/modals/clients-modal/clients-modal.module').then( m => m.ClientsModalPageModule)
+  },
 ];
 
 @NgModule({

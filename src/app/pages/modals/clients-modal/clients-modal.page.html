@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ row.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    
+    <div *ngIf="row.gender == 'male'">
+      <img src="../../../../assets/img/speakers/puppy.jpg" alt="row.name" class="clientImage"/>
+    </div>
+
+    <div *ngIf="row.gender == 'female'">
+      <img src="../../../../assets/img/speakers/kitten.jpg" alt="row.name" class="clientImage" />
+    </div>
+
+    <h3 class="clientCompany">{{ row.company }}</h3>
+
+  </ion-item>
+</ion-content>

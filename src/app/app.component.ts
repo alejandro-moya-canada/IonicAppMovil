@@ -24,6 +24,11 @@ export class AppComponent implements OnInit{
       icon: 'newspaper'
     },
     {
+      title: 'Clients',
+      url: '/clients',
+      icon: 'rocket'
+    },
+    {
       title: 'Timeless',
       url: '/timeless',
       icon: 'calendar'
