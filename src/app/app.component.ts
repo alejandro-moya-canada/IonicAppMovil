@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
 
   appPages = [
     {
-      title: 'Schedule',
+      title: 'Horario',
       url: '/schedule',
       icon: 'newspaper'
     },

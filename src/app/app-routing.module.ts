@@ -52,6 +52,14 @@ const routes: Routes = [
     path: 'clients-modal',
     loadChildren: () => import('./pages/modals/clients-modal/clients-modal.module').then( m => m.ClientsModalPageModule)
   },
+  {
+    path: 'schedule-filter',
+    loadChildren: () => import('./pages/modals/schedule-filter/schedule-filter.module').then( m => m.ScheduleFilterPageModule)
+  },
+  {
+    path: 'schedule/session/:sessionId',
+    loadChildren: () => import('./pages/session-detail/session-detail.module').then( m => m.SessionDetailPageModule)
+  }
 ];
 
 @NgModule({
