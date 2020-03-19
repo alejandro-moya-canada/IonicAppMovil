@@ -10,17 +10,28 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
+  
+  <div *ngIf="row.gender == 'male'">
+    <img src="../../../../assets/img/speakers/puppy.jpg" alt="row.name" class="clientImage"/>
+  </div>
+
+  <div *ngIf="row.gender == 'female'">
+    <img src="../../../../assets/img/speakers/kitten.jpg" alt="row.name" class="clientImage" />
+  </div>
+  <div class="clientCompany">
+    <p>Compañía</p>
+  </div>
+  <h3 class="clientCompany">{{ row.company }}</h3>
+
+  <div class="clientText">
+    <p>Nombre: </p>
+    <ion-text>{{ row.name }}</ion-text>
+    <p>Género: </p>
+    <ion-text>{{ row.gender }}</ion-text>
+
+    <p *ngIf="row.age">Edad: </p>
+    <ion-text *ngIf="row.age">{{ row.age }}</ion-text>
     
-    <div *ngIf="row.gender == 'male'">
-      <img src="../../../../assets/img/speakers/puppy.jpg" alt="row.name" class="clientImage"/>
-    </div>
+  </div>
 
-    <div *ngIf="row.gender == 'female'">
-      <img src="../../../../assets/img/speakers/kitten.jpg" alt="row.name" class="clientImage" />
-    </div>
-
-    <h3 class="clientCompany">{{ row.company }}</h3>
-
-  </ion-item>
 </ion-content>
