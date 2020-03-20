@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  { path: '', redirectTo: 'schedule', pathMatch: 'full' },
   {
     path: 'schedule',
     loadChildren: () => import('./pages/schedule/schedule.module').then( m => m.SchedulePageModule)
@@ -47,10 +46,6 @@ const routes: Routes = [
   {
     path: 'clients',
     loadChildren: () => import('./pages/clients-table/clients-table.module').then( m => m.ClientsTablePageModule)
-  },
-  {
-    path: 'clients-modal',
-    loadChildren: () => import('./pages/modals/clients-modal/clients-modal.module').then( m => m.ClientsModalPageModule)
   },
   {
     path: 'schedule-filter',

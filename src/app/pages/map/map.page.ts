@@ -33,7 +33,10 @@ export class MapPage implements AfterViewInit {
     let map;
 
     this.confData.getMap().subscribe((mapData: any) => {
+      console.log("MAP DATA:  ", mapData);
       const mapEle = this.mapElement.nativeElement;
+      console.log("MAP ELE:  ", mapEle);
+
 
       map = new googleMaps.Map(mapEle, {
         center: mapData.find((d: any) => d.center),
