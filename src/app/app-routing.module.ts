@@ -58,6 +58,10 @@ const routes: Routes = [
   {
     path: 'language-popover',
     loadChildren: () => import('./pages/language-popover/language-popover.module').then( m => m.LanguagePopoverPageModule)
+  },
+  {
+    path: 'scanQR',
+    loadChildren: () => import('./pages/scanner-qr/scanner-qr.module').then( m => m.ScannerQRPageModule)
   }
 ];
 

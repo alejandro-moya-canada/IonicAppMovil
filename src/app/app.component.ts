@@ -45,6 +45,11 @@ export class AppComponent implements OnInit{
       icon: 'megaphone'
     },
     {
+      title: 'Scan QR Code',
+      url: '/scanQR',
+      icon: 'qr-code'
+    },
+    {
       title: 'Map',
       url: '/map',
       icon: 'map'
