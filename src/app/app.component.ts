@@ -8,6 +8,7 @@ import { SwUpdate } from '@angular/service-worker';
 
 import { Storage } from '@ionic/storage';
 import { UserData } from './providers/user-data';
+import { LanguageService } from './services/language.service';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit{
 
   appPages = [
     {
-      title: 'Horario',
+      title: 'Schedule',
       url: '/schedule',
       icon: 'newspaper'
     },
@@ -67,7 +68,8 @@ export class AppComponent implements OnInit{
     private storage: Storage,
     private userData: UserData,
     private swUpdate: SwUpdate,
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    private languageService: LanguageService
 
   ) {
     this.initializeApp();
@@ -103,6 +105,8 @@ export class AppComponent implements OnInit{
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      this.languageService.setInitialAppLanguage();
     });
   }
 

@@ -54,6 +54,10 @@ const routes: Routes = [
   {
     path: 'schedule/session/:sessionId',
     loadChildren: () => import('./pages/session-detail/session-detail.module').then( m => m.SessionDetailPageModule)
+  },
+  {
+    path: 'language-popover',
+    loadChildren: () => import('./pages/language-popover/language-popover.module').then( m => m.LanguagePopoverPageModule)
   }
 ];
 

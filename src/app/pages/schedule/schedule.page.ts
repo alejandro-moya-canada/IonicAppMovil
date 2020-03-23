@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonList, AlertController, LoadingController, ModalController, IonRouterOutlet, ToastController, Config } from '@ionic/angular';
+import { IonList, AlertController, LoadingController, ModalController, IonRouterOutlet, ToastController, Config, PopoverController } from '@ionic/angular';
 import { ConferenceData } from 'src/app/providers/conference-data';
 import { Router } from '@angular/router';
 import { UserData } from 'src/app/providers/user-data';
 import { ScheduleFilterPage } from '../modals/schedule-filter/schedule-filter.page';
+import { LanguagePopoverPage } from '../language-popover/language-popover.page';
 
 @Component({
   selector: 'app-schedule',
@@ -34,7 +35,8 @@ export class SchedulePage implements OnInit {
     public routerOutlet: IonRouterOutlet,
     public toastCtrl: ToastController,
     public user: UserData,
-    public config: Config
+    public config: Config,
+    public popoverCtrl: PopoverController
   ) { }
 
   ngOnInit() {

@@ -1,0 +1,39 @@
+{
+    "appPages" : [
+        {
+          "title": "Schedule",
+          "url": "/schedule",
+          "icon": "newspaper"
+        },
+        {
+          "title": "Clients",
+          "url": "/clients",
+          "icon": "rocket"
+        },
+        {
+          "title": "Calendar",
+          "url": "/timeless",
+          "icon": "calendar"
+        },
+        {
+          "title": "Users",
+          "url": "/users",
+          "icon": "people"
+        },
+        {
+          "title": "Speakers",
+          "url": "/speakers",
+          "icon": "megaphone"
+        },
+        {
+          "title": "Map",
+          "url": "/map",
+          "icon": "map"
+        },
+        {
+          "title": "About",
+          "url": "/about",
+          "icon": "information-circle"
+        }
+      ]
+}

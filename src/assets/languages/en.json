@@ -1,0 +1,39 @@
+{
+    "appPages" : [
+        {
+          "title": "Horario",
+          "url": "/schedule",
+          "icon": "newspaper"
+        },
+        {
+          "title": "Clientes",
+          "url": "/clients",
+          "icon": "rocket"
+        },
+        {
+          "title": "Agenda",
+          "url": "/timeless",
+          "icon": "calendar"
+        },
+        {
+          "title": "Usuarios",
+          "url": "/users",
+          "icon": "people"
+        },
+        {
+          "title": "Noticias",
+          "url": "/speakers",
+          "icon": "megaphone"
+        },
+        {
+          "title": "Mapa",
+          "url": "/map",
+          "icon": "map"
+        },
+        {
+          "title": "Acerca de",
+          "url": "/about",
+          "icon": "information-circle"
+        }
+      ]
+}

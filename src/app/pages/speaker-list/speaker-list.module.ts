@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { SpeakerListPageRoutingModule } from './speaker-list-routing.module';
 
 import { SpeakerListPage } from './speaker-list.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SpeakerListPageRoutingModule
+    SpeakerListPageRoutingModule,
+    TranslateModule
   ],
   declarations: [SpeakerListPage]
 })
