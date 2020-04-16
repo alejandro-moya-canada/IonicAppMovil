@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Fichero CSV</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="exportCSV()">
+        <ion-icon name="cloud-upload"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollX="true">
+  <table border="1" class="data-table">
+    <tr>
+      <td *ngFor="let header of headerRow" text-center class="headerTable"><b>
+        {{ header }}
+      </b></td>
+    </tr>
+
+    <tr *ngFor="let row of csvData; let i = index">
+      <td *ngFor="let data of row; let j = index; trackBy: trackByFn"  class="data-col">
+        <ion-input type="text" [(ngModel)]="csvData[i][j]"></ion-input>
+      </td>
+    </tr>
+  </table>
+</ion-content>

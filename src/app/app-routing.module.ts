@@ -62,6 +62,10 @@ const routes: Routes = [
   {
     path: 'scanQR',
     loadChildren: () => import('./pages/scanner-qr/scanner-qr.module').then( m => m.ScannerQRPageModule)
+  },
+  {
+    path: 'fileCsv',
+    loadChildren: () => import('./pages/file-csv/file-csv.module').then( m => m.FileCSVPageModule)
   }
 ];
 

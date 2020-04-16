@@ -50,6 +50,11 @@ export class AppComponent implements OnInit{
       icon: 'qr-code'
     },
     {
+      title: 'CSV File',
+      url: 'fileCsv',
+      icon: 'document-text'
+    },
+    {
       title: 'Map',
       url: '/map',
       icon: 'map'

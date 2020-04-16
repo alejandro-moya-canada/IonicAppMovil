@@ -19,6 +19,10 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguagePopoverPageModule } from './pages/language-popover/language-popover.module';
 
+import { PapaParseModule } from 'ngx-papaparse';
+import { File } from '@ionic-native/file/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/languages/', '.json');
 }
@@ -43,9 +47,12 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    LanguagePopoverPageModule
+    LanguagePopoverPageModule,
+    PapaParseModule,
+  //  File,
+  //  SocialSharing
   ],
-  providers: [StatusBar,SplashScreen,InAppBrowser
+  providers: [StatusBar,SplashScreen,InAppBrowser, File, SocialSharing
   ],
   bootstrap: [AppComponent]
 })
